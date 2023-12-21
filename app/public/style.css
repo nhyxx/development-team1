@@ -8,6 +8,10 @@
     color: #000;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .h1 {
     font-size: 48px;
     font-weight: 100;
@@ -48,6 +52,7 @@
     width: 1280px;
     margin: auto;
     height: 86px;
+
 }
 
 .searchArea {
@@ -302,16 +307,19 @@
     width: 100%;
     height: 418px;
     background-image: url("image/contact.png");
+    /* overflow: hidden; */
 }
 
 .main_text2 > ul {
     display: flex;
     padding-top: 138px;
+    
 }
 
 .main_text2 > ul > li {
     flex: 1;
     text-align: center;
+    
 }
 
 .main_text2 > ul > li > div > h1,
@@ -351,16 +359,89 @@
     text-align: center;
 }
 
+/* 댓글창 */
 
-.more2 {
-    width: 220px;
-    height: 40px;
-    line-height: 40px;
-    margin: 16px auto;
-    border: 1.5px solid #18386b;
+
+.comments { 
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#commentText {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px; /* 오른쪽 여백 추가 */
+    resize: none; /* 크기 조절 비활성화 */
+
+}
+
+.button {
+    background-color: #18386b; /* 버튼 배경색 */
+    color: #fff; /* 버튼 글자색 */
+    padding: 10px;
+    border: none;
     cursor: pointer;
-    color: #18386b;
-;
+    border-radius: 5px;
+    margin-left: 5px;
+    position: absolute;
+
+
+}
+
+.button:hover {
+    background-color: #0056b3; 
+}
+
+/* 댓글 출력창 */
+
+.comment-row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+}
+
+.comment-row {
+    margin-top: 20px;
+    width: calc(100% - 150px);
+    margin-right: 200px;
+} 
+
+.comment-row > li:nth-child(2) {
+    flex-shrink: 0;
+    flex-grow: 1;
+    padding-left: 25px;
+    z-index: 1;
+    width: 100%;
+}
+
+.comment-row > li:nth-child(2) {
+    width: 85px
+
+}
+
+.comment-content {
+    cursor: pointer;
+    word-break: break-all;
+    padding-right: 25px;
+}
+
+.delete-button {
+    background-color: #18386b;
+    color: #fff;
+    border: none;
+    padding: 0px 2px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-left: 10px;
+
+}
+
+.delete-button:hover {
+    background-color: #e05252;
 }
 
 footer {

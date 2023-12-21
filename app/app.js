@@ -5,6 +5,7 @@ const nunjucks = require('nunjucks');
 // const cookieParser = require('cookie-parser');
 // const session = require('express-session');
 // const dotenv = require('dotenv');
+const connect = require('./schemas');
 
 // dotenv.config();
 const app = express();
@@ -13,9 +14,12 @@ app.set('port', process.env.PORT || 3002);
 app.set('view engine', 'html');
 nunjucks.configure('views', {
     express: app,
+    
     watch: true,
 });
 
+
+connect()
 
 
 app.use(morgan('dev'));
@@ -29,7 +33,7 @@ app.get('/', function(req,res) {
 })
 
 app.get('/main', function(req,res) {
-    res.send("<h1>여기는 메인 페이지 입니다</h1>")
+    res.send("<h1>여기는 메인 페이지입니다</h1>")
 })
 
 
@@ -61,3 +65,4 @@ app.get('/main', function(req,res) {
 app.listen(app.get('port'), () => {
     console.log(app.get('port'), '번 포트에서 대기 중');
 });
+

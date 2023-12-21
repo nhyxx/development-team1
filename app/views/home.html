@@ -5,7 +5,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
     </head>
 
     <body>
@@ -19,8 +20,9 @@
                         </form>
                     </div>
                     <ul class="nav"> 
-                        <li><a href="#link_header">HOME</a></li>
-                        <li><a href="#link_main_text0">ABOUT ME</MEnu></a></li>
+                        <!-- <li><a href="#link_header">HOME</a></li> -->
+                        <li><a href="javascript: goToScroll()">HOME</a></li>
+                        <li><a href="#link_main_text0">ABOUT ME</a></li>
                         <li><a href="#link_main_text1">SESSION</li>
                         <li><a href="#link_main_text3">PROJECT</a></li>
                     </ul>
@@ -67,7 +69,7 @@
                 <ul class="icons">
                     <li>
                         <div class="icon_img">
-                            <img src="/image/call.png">
+                            <img src="image/call.png">
                         </div>
                         <div class="contents1_bold">Phone</div>
                         <div class="contents2">
@@ -80,7 +82,7 @@
 
                     <li>
                         <div class="icon_img">
-                            <img src="/image/email.png">
+                            <img src="image/email.png">
                         </div>
                         <div class="contents1_bold">email</div>
                         <div class="contents2">
@@ -93,7 +95,7 @@
 
                     <li>
                         <div class="icon_img">
-                            <img src="/image/layers.png">
+                            <img src="image/layers.png">
                         </div>
                         <div class="contents1_bold">stack</div>
                         <div class="contents2">
@@ -120,8 +122,8 @@
                             <div class="block_bold">github</div>
                             <div class="block_contents">
 
-                                <A href="https://github.com/nhyxx"> https://github.com/nhyxx</A>
-                                
+                                <A href="javascript: newPage_1()"> https://github.com/nhyxx</A>
+                                <!-- <button type="button" onclick="location.href='https://github.com/nhyxx'">https://github.com/nhyxx</button> -->
 
                                 <br>
                                 <br>- 소스 코드 저장소
@@ -143,7 +145,7 @@
                             <div class="block_bold">blog</div>
                             <div class="block_contents">
 
-                                <A href="https://blog.naver.com/nytrippim">https://blog.naver.com/nytrippim</A>
+                                <A href="javascript: newPage_2()">https://blog.naver.com/nytrippim</A>
                                 
 
                                 <br>
@@ -184,10 +186,10 @@
                         <div class="contents2">
                             <h2>PROJECT 2</h2>
                             
-                            <br>공업통계학 팀 프로젝트
+                            <br>Engineering Statistics TEAM PROJECT
                             <br>Python을 활용한 데이터 분석 프로젝트
                             <br>
-                            <br> 진행 예정
+                            <br> 진행 중......
                         </div>
                     </div>
 
@@ -210,13 +212,19 @@
                 <div class="main_text2" id="link_main_text2">
                     <ul>
                         <li>
-                            <div><h1>etc</h1></div>
-                            <div>STUDY</dic>
-                            <div class="more2">
-                                더 알아보기
+                            <div>
+                                <h1>Comments</h1></div>
+                            <div class="comments">
+                                <div id="commentList"></div>
+                                <form id="commentForm">
+                                    <span class="box">
+                                        <input type="text" id="commentText" placeholder="댓글을 입력하세요" class="int" name="content"></textarea>
+                                    </span>
+                                    <input type="submit" class="button" value="등록">
+                                </form>
                             </div>
                         </li>
-                        <li></li>
+                         <li id="commentDisplayArea"></li> 
                     </ul>
                 </div>
                 <footer>
@@ -224,14 +232,17 @@
                         hye
                     </div>
                     <div>
-                        CEO. 마프 디자인 <br>
-                        Addr. 서울특별시 어딘구 어딘1로 111-1 
+                        CEO. <br>
+                        Addr. 
                         Fax/Tel. 02 - 002 - 0001~5 <br>
                         COPYRIGHT 2019. TAMO. ALL RIGHT RESERVED.
                     </div>
                 </footer>
-
             </div>
         </div>
+        
+        <script src="/comment.js"></script>
+        <script src="/script.js"></script>
+        
     </body>
 </html>
